@@ -7,6 +7,7 @@ protocol Folder {
   func add(newFeeds:[Feed])
 }
 
+//default implementation, optional
 extension Folder {
   mutating func add(newFeeds:[Feed]) {
     for newFeed in newFeeds {
@@ -16,6 +17,7 @@ extension Folder {
   }
 }
 
+//concrete implementation
 class LocalFolder: Folder {
   var feeds = [Feed]()
   func add(newFeeds:[Feed]) {
