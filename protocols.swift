@@ -8,7 +8,7 @@ protocol Folder {
 }
 
 class LocalFolder: Folder {
-  var feeds = [Feeds]()
+  var feeds = [Feed]()
   func add(newFeeds:[Feed]) {
     feeds += newFeeds.filter { newFeed in !self.feeds.contains { $0.url == newFeed.url } }
   }
